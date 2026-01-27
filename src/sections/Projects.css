@@ -1,0 +1,205 @@
+.projects-section {
+    padding: var(--space-4xl) 0;
+    background: var(--color-light-bg);
+    position: relative;
+}
+
+.dark .projects-section {
+    background: var(--color-dark-bg);
+}
+
+.projects-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-l);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* Actually only 2 projects, so maybe 2 cols or centered? */
+        /* With 2 items, repeat(2, 1fr) looks better or centered. I'll stick to 2 cols for now or flex */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project-card {
+    background: #FFFFFF;
+    border-radius: var(--radius-l);
+    border: 1px solid var(--color-light-divider);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.dark .project-card {
+    background: var(--color-dark-card);
+    border-color: var(--color-dark-divider);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-brand-blue);
+}
+
+.project-image-wrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-content {
+    padding: var(--space-l);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-header {
+    margin-bottom: var(--space-m);
+}
+
+.project-type {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-brand-blue);
+    letter-spacing: 0.5px;
+}
+
+.project-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-light-text);
+    margin-top: 4px;
+}
+
+.dark .project-title {
+    color: var(--color-dark-text);
+}
+
+.project-description {
+    font-size: 15px;
+    color: var(--color-light-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-m);
+    flex-grow: 1;
+}
+
+.dark .project-description {
+    color: #9CA3AF;
+}
+
+.project-features ul {
+    list-style: none;
+    margin-bottom: var(--space-m);
+}
+
+.project-features li {
+    font-size: 14px;
+    color: var(--color-light-text);
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.dark .project-features li {
+    color: #D1D5DB;
+}
+
+.project-features li::before {
+    content: '▸';
+    color: var(--color-cyan-accent);
+    margin-right: 8px;
+}
+
+.project-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space-m);
+    padding-bottom: var(--space-m);
+    border-bottom: 1px solid var(--color-light-divider);
+}
+
+.dark .project-metrics {
+    border-color: var(--color-dark-divider);
+}
+
+.metric-badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 8px;
+    background: var(--color-tech-green);
+    color: #FFFFFF;
+    border-radius: var(--radius-s);
+}
+
+.project-tech {
+    margin-top: auto;
+}
+
+.tech-stack-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-pill {
+    font-size: 12px;
+    color: var(--color-light-secondary);
+    background: var(--color-light-bg);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-light-divider);
+}
+
+.dark .tech-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: #9CA3AF;
+}

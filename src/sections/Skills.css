@@ -1,0 +1,144 @@
+.skills-section {
+    padding: var(--space-4xl) 0;
+    background: var(--color-light-bg);
+    position: relative;
+}
+
+.dark .skills-section {
+    background: var(--color-dark-bg);
+}
+
+.skills-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--space-l);
+}
+
+.text-center {
+    text-align: center;
+    display: block;
+}
+
+.center-divider {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-l);
+    margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.skill-category-card {
+    background: #FFFFFF;
+    border-radius: var(--radius-l);
+    padding: var(--space-l);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-light-divider);
+    transition: all var(--transition-normal);
+    cursor: default;
+}
+
+.dark .skill-category-card {
+    background: var(--color-dark-card);
+    border-color: var(--color-dark-divider);
+}
+
+.skill-category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-brand-blue);
+}
+
+.skill-category-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-m);
+    margin-bottom: var(--space-m);
+}
+
+.skill-icon-wrapper {
+    color: var(--color-brand-blue);
+    background: rgba(59, 130, 246, 0.1);
+    padding: 10px;
+    border-radius: var(--radius-m);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-category-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-light-text);
+}
+
+.dark .skill-category-title {
+    color: var(--color-dark-text);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-s);
+}
+
+/* Mobile Accordion Logic (Optional) - currently defaulting to always show */
+.skill-tag {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    background: rgba(59, 130, 246, 0.05);
+    color: var(--color-light-secondary);
+    border-radius: var(--radius-full);
+    border: 1px solid transparent;
+    transition: all var(--transition-fast);
+    cursor: default;
+}
+
+.dark .skill-tag {
+    background: rgba(255, 255, 255, 0.05);
+    color: #D1D5DB;
+}
+
+.skill-category-card:hover .skill-tag {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--color-brand-blue);
+}
+
+.skill-tag:hover {
+    background: var(--gradient-blue);
+    color: #FFFFFF !important;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-sm);
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
