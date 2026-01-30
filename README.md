@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# Portfolio - Mohammed Rizwan S
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Hey there! 👋 Thanks for checking out my portfolio.
 
-Currently, two official plugins are available:
+This isn't just a collection of files; it's the digital home for my work as a Full-Stack Engineer. I built this site to do one thing: **showcase my skills in a way that feels premium, polished, and professional.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+I wanted a space that reflects how I code—clean, performant, and user-centric. Whether you're a recruiter, a fellow dev, or just passing through, I hope you enjoy the experience.
 
-## React Compiler
+## 🚀 Why I Built This
+I needed a portfolio that stood out. Templates are great, but they often lack personality. I decided to build this from scratch using **React** and **TypeScript** because I wanted full control over the design system, animations, and performance optimizations.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**Key Goals:**
+*   **Performance First:** Fast load times and smooth scrolling (60fps).
+*   **Design System:** I stuck to a strict set of CSS variables for colors and spacing to ensure consistency.
+*   **Responsive:** It had to look amazing on a phone, tablet, and 4k monitor.
 
-## Expanding the ESLint configuration
+## 🛠️ The Tech Stack
+Here's what makes this thing tick:
+*   **React (Vite):** Blazing fast builds and hot reloading.
+*   **TypeScript:** Type safety helps me sleep better at night. 😴
+*   **Vanilla CSS:** No heavy frameworks like Tailwind or Bootstrap here (mostly). I wanted to keep the bundle size tiny and show off my CSS fundamentals, using Variables and Flexbox/Grid extensively.
+*   **Lucide React:** Beautiful, consistent icons.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🏃‍♂️ Running it Locally
+If you want to poke around the code or run it on your machine:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1.  **Clone the repo:**
+    ```bash
+    git clone https://github.com/algophoenix/portfolio.git
+    cd portfolio
+    ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3.  **Fire it up:**
+    ```bash
+    npm run dev
+    ```
+    Open `http://localhost:5173` (or whatever port Vite gives you) and take a look!
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Project Structure
+*   `src/components`: Reusable UI bits like the Navbar and Buttons.
+*   `src/sections`: The big blocks of the page (Hero, About, Projects, etc.).
+*   `src/assets`: Images and PDFs.
+*   `index.css`: Where the design magic (variables & global styles) lives.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📬 Let's Connect
+I'm always open to discussing new opportunities, interesting projects, or just chatting about Java vs. everything else.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+*   [LinkedIn](https://www.linkedin.com/in/rizwan-s-a017aa309/)
+*   [GitHub](https://github.com/algophoenix)
+*   Email: rizwan.aiexpert@gmail.com
+
+---
+*Built with ❤️ and a lot of coffee by Rizwan.*
