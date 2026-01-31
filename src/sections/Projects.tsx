@@ -20,12 +20,12 @@ interface Project {
 
 const projects: Project[] = [
     {
-        id: 'myaprc',
-        title: 'MYAPRC – Enterprise Platform',
+        id: 'aprc',
+        title: 'APRC – Enterprise Platform',
         type: 'Internal Enterprise App',
         description: 'Comprehensive full-stack enterprise platform built for internal operations, handling critical business workflows with high availability.',
         image: project1,
-        techStack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'AWS'],
+        techStack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'AWS','Liquibase','JUnit','SonarQube'],
         features: [
             'Microservices architecture with Spring Boot',
             'Complex schema with Liquibase migration',

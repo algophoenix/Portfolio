@@ -54,7 +54,7 @@ export const About: React.FC = () => {
                         <p className="about-description">
                             I am a <span className="highlight">Software Engineer</span> with 3+ years of experience architecting and
                             scaling full-stack applications. Specialized in backend systems using
-                            <span className="highlight"> Java, Spring Boot</span>, and cloud-native technologies.
+                            <span className="highlight"> Java, Spring Boot,React</span>, and cloud-native technologies.
                         </p>
 
                         <p className="about-description">

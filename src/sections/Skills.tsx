@@ -38,8 +38,7 @@ const skillCategories: SkillCategory[] = [
         title: 'Frontend Stack',
         icon: <Layout size={20} />,
         skills: [
-            { name: 'React (TypeScript)' }, { name: 'Javascript' }, { name: 'HTML5/CSS3' },
-            { name: 'Tailwind/Vanilla' }
+            { name: 'React (TypeScript)' }, { name: 'Javascript' }, { name: 'HTML5/CSS3' }
         ]
     },
     {

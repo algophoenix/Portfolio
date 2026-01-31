@@ -18,7 +18,7 @@ const achievements: Achievement[] = [
         title: 'Hackathon Champion',
         context: 'Won company-wide hackathon by delivering innovative full-stack solution.',
         metric: '1st Prize',
-        year: '2024',
+        year: '2025',
         icon: <Award size={32} />,
         color: 'from-yellow-400 to-orange-500'
     },
