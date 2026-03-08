@@ -4,6 +4,7 @@ import { Button } from '../components/Button';
 import './Projects.css';
 import project1 from '../assets/project_myaprc.png';
 import project2 from '../assets/project_bally.png';
+import project3 from '../assets/project_fitpulse.png';
 
 interface Project {
     id: string;
@@ -25,7 +26,7 @@ const projects: Project[] = [
         type: 'Internal Enterprise App',
         description: 'Comprehensive full-stack enterprise platform built for internal operations, handling critical business workflows with high availability.',
         image: project1,
-        techStack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'AWS','Liquibase','JUnit','SonarQube'],
+        techStack: ['Java', 'Spring Boot', 'React', 'PostgreSQL', 'Docker', 'AWS', 'Liquibase', 'JUnit', 'SonarQube'],
         features: [
             'Microservices architecture with Spring Boot',
             'Complex schema with Liquibase migration',
@@ -47,6 +48,20 @@ const projects: Project[] = [
         ],
         metrics: ['1000+ Daily Trans.', 'Sub-second API', '15% Conv. Increase'],
         demoUrl: 'https://bally.in/'
+    },
+    {
+        id: 'fitpulse',
+        title: 'FitPulse – Fitness Tracker',
+        type: 'Web & Mobile App',
+        description: 'A responsive fitness tracking application accessible on both desktop and mobile devices. Test account: realtest@gmail.com / Password123!',
+        image: project3,
+        techStack: ['React', 'Vite', 'Web App', 'Mobile Responsive'],
+        features: [
+            'Cross-platform web & mobile support',
+            'Dashboard for tracking active workouts',
+            'User authentication and profiles'
+        ],
+        demoUrl: 'https://fitpluse-ldiq.vercel.app/'
     }
 ];
 
