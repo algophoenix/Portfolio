@@ -29,6 +29,7 @@ const experiences: ExperienceItem[] = [
         ],
         techStack: ['Java', 'Spring Boot', 'React', 'Docker', 'Kubernetes', 'AWS S3']
     },
+/*
     {
         id: 'exp2',
         role: 'Software Engineer | Full-Stack Developer',
@@ -44,6 +45,7 @@ const experiences: ExperienceItem[] = [
         ],
         techStack: ['Java', 'Spring Boot', 'React (TS)', 'PostgreSQL', 'Liquibase', 'Jira']
     }
+*/
 ];
 
 export const Experience: React.FC = () => {
@@ -55,47 +57,92 @@ export const Experience: React.FC = () => {
                 </h2>
                 <div className="section-divider center-divider"></div>
 
-                <div className="timeline">
-                    <div className="timeline-line"></div>
+                <div className={`experience-wrapper ${experiences.length === 1 ? 'single-featured' : 'timeline'}`}>
+                    {experiences.length > 1 && <div className="timeline-line"></div>}
 
                     {experiences.map((exp, index) => (
-                        <div key={exp.id} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-                            <div className="timeline-dot"></div>
-                            <div className="experience-card animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
-                                <div className="exp-header">
-                                    <div className="exp-role-company">
-                                        <h3 className="exp-role">{exp.role}</h3>
-                                        <div className="exp-company">
-                                            <Briefcase size={16} className="exp-icon" />
-                                            {exp.company}
+                        <div key={exp.id} className={`experience-item-container ${experiences.length === 1 ? 'featured' : (index % 2 === 0 ? 'left' : 'right')}`}>
+                            {experiences.length > 1 && (
+                                <>
+                                    <div className="timeline-dot"></div>
+                                    <div className="experience-card animate-slide-up" style={{ animationDelay: `${index * 0.2}s` }}>
+                                        <div className="exp-header">
+                                            <div className="exp-role-company">
+                                                <h3 className="exp-role">{exp.role}</h3>
+                                                <div className="exp-company">
+                                                    <Briefcase size={16} className="exp-icon" />
+                                                    {exp.company}
+                                                </div>
+                                            </div>
+                                            <div className="exp-meta">
+                                                <div className="exp-date">
+                                                    <Calendar size={14} className="mr-1" />
+                                                    {exp.duration}
+                                                </div>
+                                                <div className="exp-location">
+                                                    <MapPin size={14} className="mr-1" />
+                                                    {exp.location}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p className="exp-description">{exp.description}</p>
+                                        <ul className="exp-highlights">
+                                            {exp.highlights.map((highlight, idx) => (
+                                                <li key={idx}>{highlight}</li>
+                                            ))}
+                                        </ul>
+                                        <div className="exp-tech-stack">
+                                            {exp.techStack.map((tech) => (
+                                                <span key={tech} className="tech-tag">{tech}</span>
+                                            ))}
                                         </div>
                                     </div>
-                                    <div className="exp-meta">
-                                        <div className="exp-date">
-                                            <Calendar size={14} className="mr-1" />
-                                            {exp.duration}
+                                </>
+                            )}
+
+                            {experiences.length === 1 && (
+                                <div className="featured-card animate-slide-up">
+                                    <div className="featured-badge">Current Position</div>
+                                    <div className="featured-grid">
+                                        <div className="featured-left">
+                                            <div className="featured-brand">
+                                                <div className="featured-icon-box">
+                                                    <Briefcase size={32} />
+                                                </div>
+                                                <div>
+                                                    <h3 className="featured-company">{exp.company}</h3>
+                                                    <p className="featured-location">
+                                                        <MapPin size={14} className="mr-1" />
+                                                        {exp.location}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="featured-period">
+                                                <Calendar size={16} className="mr-2" />
+                                                {exp.duration}
+                                            </div>
                                         </div>
-                                        <div className="exp-location">
-                                            <MapPin size={14} className="mr-1" />
-                                            {exp.location}
+                                        
+                                        <div className="featured-right">
+                                            <h4 className="featured-role">{exp.role}</h4>
+                                            <p className="featured-desc">{exp.description}</p>
+                                            <ul className="featured-highlights">
+                                                {exp.highlights.map((highlight, idx) => (
+                                                    <li key={idx}>{highlight}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className="featured-footer">
+                                        <div className="featured-tech-label">Core Technologies:</div>
+                                        <div className="featured-tech-stack">
+                                            {exp.techStack.map((tech) => (
+                                                <span key={tech} className="tech-pill">{tech}</span>
+                                            ))}
                                         </div>
                                     </div>
                                 </div>
-
-                                <p className="exp-description">{exp.description}</p>
-
-                                <ul className="exp-highlights">
-                                    {exp.highlights.map((highlight, idx) => (
-                                        <li key={idx}>{highlight}</li>
-                                    ))}
-                                </ul>
-
-                                <div className="exp-tech-stack">
-                                    {exp.techStack.map((tech) => (
-                                        <span key={tech} className="tech-tag">{tech}</span>
-                                    ))}
-                                </div>
-                            </div>
+                            )}
                         </div>
                     ))}
                 </div>

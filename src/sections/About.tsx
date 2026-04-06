@@ -52,7 +52,7 @@ export const About: React.FC = () => {
                         <div className="section-divider"></div>
 
                         <p className="about-description">
-                            I am a <span className="highlight">Software Engineer</span> with 3+ years of experience architecting and
+                            I am a <span className="highlight">Software Engineer</span> with 2+ years of experience architecting and
                             scaling full-stack applications. Specialized in backend systems using
                             <span className="highlight"> Java, Spring Boot,React</span>, and cloud-native technologies.
                         </p>
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
                     <div className="about-stats-column">
                         <div className="stats-grid">
                             <StatCard
-                                value="3+"
+                                value="2+"
                                 label="Years Experience"
                                 icon={<Server size={24} />}
                                 delay={0.1}

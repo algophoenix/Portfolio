@@ -5,6 +5,7 @@ import './Projects.css';
 import project1 from '../assets/project_myaprc.png';
 import project2 from '../assets/project_bally.png';
 import project3 from '../assets/project_fitpulse.png';
+import project4 from '../assets/project_careersync.png';
 
 interface Project {
     id: string;
@@ -50,6 +51,21 @@ const projects: Project[] = [
         demoUrl: 'https://bally.in/'
     },
     {
+        id: 'careersync',
+        title: 'CareerSync – AI Job Agent',
+        type: 'SaaS Automation Platform',
+        description: 'Intelligent job search assistant that automates lead discovery, tracking over 1,800+ opportunities daily with seamless LinkedIn integration.',
+        image: project4,
+        techStack: ['React', 'TypeScript', 'Node.js', 'AI Automation', 'Vercel'],
+        features: [
+            'Real-time automated scraper (1800+ daily leads)',
+            'Intelligent dashboard for lead management',
+            'Seamless LinkedIn & 3rd-party integration'
+        ],
+        metrics: ['1800+ Daily Leads', '95% Match Accuracy', '10x Faster Search'],
+        demoUrl: 'https://job-agent-smoky.vercel.app/'
+    },
+    {
         id: 'fitpulse',
         title: 'FitPulse – Fitness Tracker',
         type: 'Web & Mobile App',
@@ -61,7 +77,7 @@ const projects: Project[] = [
             'Dashboard for tracking active workouts',
             'User authentication and profiles'
         ],
-        demoUrl: 'https://fitpluse-ldiq.vercel.app/'
+        demoUrl: 'https://fitpluse-seven.vercel.app/'
     }
 ];
 
